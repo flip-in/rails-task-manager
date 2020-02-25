@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.edit-form-labels {
+  margin: 5px 0px !important;
+}
+
+input {
+  display: block;
+}
+
+#task_completed{
+  display: inline-block;
+}
+
+.submit-button {
+  background: #d7d7df;
+  color: #28647c;
+  border-radius: 5px;
+}

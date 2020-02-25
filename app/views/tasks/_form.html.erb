@@ -1,0 +1,9 @@
+<%= form_for task do |f| %>
+  <%= f.label :title, class: 'edit-form-labels' %>
+  <%= f.text_field :title, :size => 30 %>
+  <%= f.label :details, class: 'edit-form-labels' %>
+  <%= f.text_field :details, :size => 50 %>
+  <%= f.label :completed, class: 'edit-form-labels' %>
+  <%= f.check_box :completed %>
+  <%= f.submit "Confirm", class:'submit-button' %>
+<% end %>

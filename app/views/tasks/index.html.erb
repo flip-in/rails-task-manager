@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>My Tasks</h1>
+    <div class="my-list">
+      <ul>
+        <% @tasks.each do |task| %>
+            <div class="custom-control custom-checkbox mb-3">
+              <% if task.completed %>
+                <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+              <% else %>
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+              <% end %>
+              <label class="custom-control-label" for="defaultChecked2"><%= link_to task.title, task_path(task) %></label>
+              <%= link_to task_path(task.id), class: 'delete-link', method: :delete, data: {confirm: "Are you sure?"} do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <% end %>
+        <%= link_to "Add a task", new_task_path  %>
+      </ul>
+    </div>
+</div>
